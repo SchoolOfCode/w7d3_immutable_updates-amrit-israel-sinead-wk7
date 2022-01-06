@@ -44,7 +44,13 @@ export function updateName(object, newName) {
 //     toggleTeaStatus({ name: "Abe", needsACupOfTea: false })
 // should give back:
 //     { name: "Abe", needsACupOfTea: true }
-export function toggleTeaStatus(object) {}
+export function toggleTeaStatus(object) {
+  if (object.needsACupOfTea === true) {
+    return { ...object, needsACupOfTea: false };
+  } else {
+    return { ...object, needsACupOfTea: true };
+  }
+}
 
 // Combo Time!!
 
@@ -54,4 +60,6 @@ export function toggleTeaStatus(object) {}
 //    toggleListItemCompleted([{ task: "Cooking", completed: true }, { task: "Walking", completed: false }], 1)
 // should give back:
 //    [{ task: "Cooking", completed: true }, { task: "Walking", completed: true }]
-export function toggleListItemCompleted(array, index) {}
+export function toggleListItemCompleted(array, index) {
+  
+}
